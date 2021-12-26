@@ -21,8 +21,6 @@ Input:
 Output: 4
 */
 
-![Converging_Maze_Nearest_Meeting_Cell](https://user-images.githubusercontent.com/65452458/147403320-811e5683-6ba2-49b8-96af-8a4302b03d94.jpeg)
-
 #include <bits/stdc++.h>
 using namespace std;
 
