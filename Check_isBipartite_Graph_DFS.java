@@ -1,3 +1,18 @@
+/*
+Given an adjacency list of a graph adj  of V no. of vertices having 0 based index. Check whether the graph is bipartite or not.
+    0
+1       2
+Output: 1
+Explanation: The given graph can be colored in two colors so, it is a bipartite graph.
+    0        1    
+2       3
+Output: 0
+Explanation: The given graph cannot be colored in two colors such that color of adjacent vertices differs.
+Your Task:
+You don't need to read or print anything. Your task is to complete the function isBipartite() which takes V denoting no
+of vertices and adj denoting adjacency list of graph and returns a boolean value true if graph is bipartite otherwise returns false.
+*/
+
 import java.util.*; 
 
 boolean dfsCheck(ArrayList<ArrayList<Integer>> adj, int node, int color[]) {
