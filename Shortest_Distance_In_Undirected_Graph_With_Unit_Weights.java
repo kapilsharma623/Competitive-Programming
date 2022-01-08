@@ -19,6 +19,14 @@ import java.util.ArrayList;
 
 public class Shortest_Distance_In_Undirected_Graph_With_Unit_Weights {
 
+	static void dfs(int node,ArrayList<ArrayList<Integer> > adj,ArrayList<Integer> distance) {
+		for(Integer itr:adj.get(node)) {
+			if(distance.get(itr) > distance.get(node)+1) {
+				distance.set(itr,distance.get(node)+1);
+				dfs(itr,adj,distance);
+			}
+		}
+	}
 	public static void main(String[] args) {
 		ArrayList<ArrayList<Integer> > adj=new ArrayList<>();
 		ArrayList<Integer> distance=new ArrayList<>();
@@ -79,15 +87,6 @@ public class Shortest_Distance_In_Undirected_Graph_With_Unit_Weights {
 		int i=0;
 		for(Integer ele:distance) {
 			System.out.println(i++ + " Minimum Distance is " +ele);
-		}
-	}
-
-	static void dfs(int node,ArrayList<ArrayList<Integer> > adj,ArrayList<Integer> distance) {
-		for(Integer itr:adj.get(node)) {
-			if(distance.get(itr) > distance.get(node)+1) {
-				distance.set(itr,distance.get(node)+1);
-				dfs(itr,adj,distance);
-			}
 		}
 	}
 }
